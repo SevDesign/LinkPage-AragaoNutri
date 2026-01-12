@@ -54,7 +54,7 @@ html, body {
 }
 .head .slide .banner {
   max-width: 40%;
-  min-height: 100%;
+  max-height: 80vh;
 }
 .head .ativo {
   display: flex;
