@@ -7,16 +7,17 @@ html, body {
 }
 
 .head {
-  position: relative;
-  display: flex;
+  display: grid;
+  grid-template-areas: "pilha";
   align-items: center;
   justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 .head .slide {
+  grid-area: pilha;
   background-color: whitesmoke;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   opacity: 0;
   transition: opacity 1s ease;
@@ -45,8 +46,11 @@ html, body {
   transition-delay: 0.3s;
 }
 .head .slide .head-titulos .texto-secundario {
-  font-size: 1rem;
-  transition-delay: 0.6s;
+  font-size: 0.7rem;
+  transition-delay: 0.5s;
+}
+.head .slide .head-titulos .texto-invertido {
+  transform: translateX(100px);
 }
 .head .slide .head-titulos .t-ativo {
   opacity: 1;
@@ -60,6 +64,47 @@ html, body {
   display: flex;
   opacity: 1;
   transition-delay: 1.2s;
+}
+
+.consultas {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0 3rem 0;
+  color: white;
+  transform: translateY(-1px);
+  background: linear-gradient(120deg, #2749a5, #9db7ff);
+}
+.consultas .title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 0.8rem 0;
+}
+.consultas .subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.consultas .links-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem 10%;
+  gap: 2rem;
+}
+.consultas .links-container .link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 6rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  gap: 1rem;
+  font-weight: 600;
+  border: white 3px solid;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
