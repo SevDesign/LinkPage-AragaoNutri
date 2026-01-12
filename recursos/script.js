@@ -23,6 +23,6 @@ texto_secundario[indiceAtual].classList.add('t-ativo');
 
 setInterval(() => {
     mudarSlide(indiceAtual);
-}, 6000);
+}, 15000);
 
 
