@@ -69,7 +69,7 @@ html, body{
 
             .texto-primario, .texto-secundario{
                 color: black;
-                padding-left: 10%;
+                padding-left: 8%;
                 margin: 0;
                 opacity: 0;
                 transform: translateX(-100px);
@@ -90,6 +90,7 @@ html, body{
             .texto-invertido{
                 transform: translateX(100px);
                 padding-left: 0;
+                padding-right: 8%;
             }
             
             .t-ativo{
@@ -104,6 +105,16 @@ html, body{
             transition: all 1.5s ease;
         }
     }
+
+    /*
+    .right{
+        clip-path: polygon(0 0, 100% 0, 100% 92%, 55% 92%, 45% 100%, 0 100%);
+    }
+
+    .left{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 55% 100%, 45% 92%, 0 92%);
+    }
+    */
 
     .ativo{
         opacity: 1;
