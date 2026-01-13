@@ -31,11 +31,10 @@ html, body{
     display: grid;
     grid-template-areas: "pilha";
     align-items: center;
-    justify-content: center;
     width: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(0deg, #2749a5, #1d3474);
+    background: linear-gradient(0deg, #1d3474, #061a50);
 
     .slide-fixo{
         grid-area: pilha;
@@ -106,16 +105,6 @@ html, body{
         }
     }
 
-    /*
-    .right{
-        clip-path: polygon(0 0, 100% 0, 100% 92%, 55% 92%, 45% 100%, 0 100%);
-    }
-
-    .left{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 55% 100%, 45% 92%, 0 92%);
-    }
-    */
-
     .ativo{
         opacity: 1;
         transition-delay: 1.2s;
@@ -130,7 +119,8 @@ html, body{
     padding: 2rem 0 3rem 0;
     color: white;
     transform: translateY(-1px);
-    background: linear-gradient(180deg, #2749a5, #1d3474);
+    background: linear-gradient(180deg, #1d3474, #061a50);
+    text-align: center;
 
     .title{
         text-align: center;
@@ -144,13 +134,26 @@ html, body{
         margin: 0;
     }
 
-    .links-container{
+    .topic{
+        margin: 2.5rem 0 1.2rem 0;
+        font-size: 1.5rem;
+    }
+
+    .planos-container{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        
+        
+    }
+
+    .modelos-container{
         display: flex;
         justify-content: space-evenly;
         margin: 2rem 10%;
         gap: 2rem;
 
-        .link{
+        .modelos{
             display: flex;
             flex-direction: column;
             justify-content: center;

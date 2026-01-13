@@ -1,4 +1,5 @@
 let indiceAtual = 0;
+let tempoIndice = [7000, 10000, 10000, 10000, 10000];
 const slides = document.querySelectorAll('.slide');
 const texto_primario = document.querySelectorAll('.texto-primario');
 const texto_secundario = document.querySelectorAll('.texto-secundario');
@@ -21,8 +22,11 @@ slides[indiceAtual].classList.add('ativo');
 texto_primario[indiceAtual].classList.add('t-ativo');
 texto_secundario[indiceAtual].classList.add('t-ativo');
 
-setInterval(() => {
-    mudarSlide(indiceAtual);
-}, 15000);
+async function iniciarSlideshow() {
+    while (true) {
+        await esperar(tempoIndice[indiceAtual]);
+        mudarSlide(indiceAtual);
+    }
+}
 
-
+iniciarSlideshow();
