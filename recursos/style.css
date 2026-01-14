@@ -18,14 +18,12 @@ html, body {
 }
 .icon-container .icon-logo {
   width: 1.5rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin: 0;
 }
 .icon-container .icon-nome {
   width: 10rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin: 0;
 }
 
@@ -117,14 +115,16 @@ html, body {
   text-align: center;
 }
 .consultas .title {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   margin: 0 0 0.5rem 0;
   font-weight: 700;
 }
 .consultas .subtitle {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   opacity: 0.8;
   margin-bottom: 3rem;
+  max-width: 90%;
 }
 .consultas .topic {
   max-width: 90%;
@@ -139,8 +139,7 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  max-width: 60rem;
+  max-width: 55rem;
   width: 100%;
   margin-bottom: 2rem;
 }
@@ -162,7 +161,6 @@ html, body {
   text-align: left; /* Texto alinhado à esquerda para leitura */
   /* O TRUQUE DO ALINHAMENTO: */
   /* A lista se comporta como um bloco centralizado, mas o texto dentro é esquerda */
-  width: -moz-fit-content;
   width: fit-content;
 }
 .consultas .planos-container .plano-container .plano-lista li {
@@ -227,4 +225,32 @@ html, body {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-5px);
   border-color: white;
-}/*# sourceMappingURL=style.css.map */
+}
+.consultas .oculto-container {
+  display: flex;
+  max-width: 90%;
+}
+.consultas .oculto-container .etapas-container {
+  display: none;
+  margin: 2rem 0;
+  max-width: 90%;
+}
+.consultas .oculto-container .localizacao-container {
+  display: none;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.consultas .oculto-container .localizacao-container .mapa-google {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+.consultas .oculto-container .ativo {
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */
