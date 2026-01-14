@@ -113,89 +113,138 @@ html, body{
     }
 }
 
-.consultas{
+.consultas {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0 3rem 0;
-    color: white;
+    padding: 4rem 0 4rem 0;
     transform: translateY(-1px);
+    color: white;
     background: linear-gradient(180deg, #1d3474, #061a50);
     text-align: center;
 
-    .title{
-        text-align: center;
-        font-size: 2rem;
-        margin: 0 0 .8rem 0;
+    .title {
+        font-size: 2.5rem;
+        margin: 0 0 .5rem 0;
+        font-weight: 700;
     }
     
-    .subtitle{
-        text-align: center;
-        font-size: 1.2rem;
-        margin: 0;
+    .subtitle {
+        font-size: 1.1rem;
+        opacity: 0.8;
+        margin-bottom: 3rem;
     }
 
-    .topic{
-        margin: 2.5rem 0 2rem 0;
-        font-size: 1.5rem;
+    .topic {
+        max-width: 90%;
+        margin: 2rem 0 1rem 0;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        opacity: 0.9;
     }
 
-    .planos-container{
+    .planos-container {
         display: flex;
-        justify-content: space-evenly;
-        margin: 0;
-        max-width: 50rem;
-        width: 90%;
-        height: max-content;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        max-width: 60rem;
+        width: 100%;
+        margin-bottom: 2rem;
         
         .plano-container {
+            padding: 2rem 2rem 0 2rem;
+            flex: 1;
             display: flex;
             flex-direction: column;
-            align-content: center;
-            justify-content: start;
-            padding: 0;
+            align-items: center;
 
-            .plano-titulo{
-                text-align: center;
-                font-size: 1.5rem;
-                margin: 0;
+            .plano-titulo {
+                font-size: 1.8rem;
+                margin: 0 0 1.5rem 0;
             }
 
-            .plano-lista{
-                text-align: start;
+            .plano-lista {
+                list-style: none; /* Remove as bolinhas feias */
                 padding: 0;
-            }
-        }
+                margin: 0;
+                text-align: left; /* Texto alinhado à esquerda para leitura */
+                
+                /* O TRUQUE DO ALINHAMENTO: */
+                /* A lista se comporta como um bloco centralizado, mas o texto dentro é esquerda */
+                width: fit-content; 
 
-        .plano-linha{
-            width: 2px;
-            height: auto;
-            background-color: white;
+                li {
+                    display: flex;
+                    align-items: flex-start; /* Alinha ícone com a primeira linha se quebrar */
+                    gap: 10px;
+                    margin-bottom: 0.8rem;
+                    font-size: 1rem;
+                    line-height: 1.5;
+                    opacity: 0.9;
+                    
+                    /* Ícone do FontAwesome */
+                    i {
+                        color: #4cd137; /* Verde Check ou use a cor do tema */
+                        margin-top: 4px; /* Ajuste fino para alinhar com o texto */
+                        font-size: 0.9rem;
+                    }
+                }
+            }
         }
     }
 
-    .modelos-container{
+    .modelos-container {
         display: flex;
-        justify-content: space-evenly;
-        margin: 2rem 10%;
         gap: 2rem;
+        padding-top: 1rem;
+        margin-bottom: 2rem;
 
-        .modelos{
+        .modelo-item {
             display: flex;
+            flex: 1;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            width: 5rem;
-            height: 6rem;
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
+            justify-content: center;
             gap: 1rem;
-            font-weight: 600;
-            border: white 3px solid;
-            border-radius: 1rem;
             padding: 1rem;
+            color: white;
+            cursor: default;
+        }
+    }
+
+    .info-container {
+        display: flex;
+        gap: 2rem;
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+        max-width: 90%;
+
+        .info-item {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+
+            span { font-weight: 600; text-justify: center;}
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.1);
+                transform: translateY(-5px);
+                border-color: white;
+            }
         }
     }
 }
