@@ -139,13 +139,80 @@
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Av.+Washington+Soares,+1321+-+Edson+Queiroz,+Fortaleza+-+CE" 
+                    target="_blank" 
+                    class="btn-abrir-mapa">
+                    <div class="icone-mapa">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="texto-btn">
+                        <span>Abrir no GPS</span>
+                        <small>Ir para o aplicativo</small>
+                    </div>
+                    <i class="fa-solid fa-chevron-right seta"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="Agendamento">
-        
-    </section>
+    <section class="agendamento" id="contato">
+        <div class="agendamento-content">
+            <h1 class="title">Comece sua mudança hoje</h1>
+            <p class="subtitle">Preencha rapidinho para eu entender seu perfil e te chamar.</p>
+
+            <form id="form-agendamento" class="form-grid">
+            
+                <div class="input-group">
+                    <label>Seu Nome</label>
+                    <input type="text" id="nome" placeholder="Como prefere ser chamado?" required>
+                </div>
+                
+                <div class="input-group" style="max-width: 100px;">
+                    <label>Idade</label>
+                    <input type="number" id="idade" placeholder="Anos" required min="10" max="99">
+                </div>
+
+                <div class="input-group">
+                    <label>Qual seu objetivo principal?</label>
+                    <div class="chips-container" id="objetivo-options">
+                        <button type="button" class="chip" data-value="Emagrecimento">Emagrecimento</button>
+                        <button type="button" class="chip" data-value="Hipertrofia">Ganhar Músculo</button>
+                        <button type="button" class="chip" data-value="Saúde/Performance">Saúde/Performance</button>
+                        <button type="button" class="chip" data-value="Outro">Outro</button>
+                    </div>
+                    <input type="hidden" id="objetivo-selecionado">
+                </div>
+
+                <div class="input-group">
+                    <label>Dias de preferência (marque quantos quiser)</label>
+                    <div class="chips-container" id="dias-options">
+                        <button type="button" class="chip" data-value="Seg">Seg</button>
+                        <button type="button" class="chip" data-value="Ter">Ter</button>
+                        <button type="button" class="chip" data-value="Qua">Qua</button>
+                        <button type="button" class="chip" data-value="Qui">Qui</button>
+                        <button type="button" class="chip" data-value="Sex">Sex</button>
+                        <button type="button" class="chip" data-value="Sab">Sáb</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Melhor horário para você?</label>
+                    <div class="chips-container" id="turno-options">
+                        <button type="button" class="chip" data-value="Manhã">Manhã</button>
+                        <button type="button" class="chip" data-value="Tarde/Noite">Tarde/Noite</button>
+                    </div>
+                    <input type="hidden" id="turno-selecionado">
+                </div>
+
+                <button type="submit" class="btn-whatsapp-final">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Enviar solicitação no WhatsApp
+                </button>
+            </form>
+        </div>
+</section>
+
 </body>
 <script src="recursos/script.js" type="module"></script>
 </html>

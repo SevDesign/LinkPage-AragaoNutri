@@ -2,6 +2,7 @@
 const esperar = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 
+
 /* LÓGICA DO SLIDESHOW */
 let indiceAtual = 0;
 let tempoIndice = [7000, 10000, 10000, 10000, 10000];
@@ -34,6 +35,7 @@ async function iniciarSlideshow() {
 }
 
 iniciarSlideshow();
+
 
 
 /* EXIBIR INFORMAÇÕES OCULTAS */
@@ -86,4 +88,75 @@ btnLocalizacao.addEventListener('click', () => {
         mostrarMapa();
     else 
         ocultarMapa();
+});
+
+
+
+
+/* LÓGICA DE SELEÇÃO DOS BOTÕES (CHIPS) */
+// --- 1. SELEÇÃO ÚNICA (Rádio Button Visual) ---
+// Para Objetivo e Turno
+const setupSingleSelect = (containerId, inputId) => {
+    const container = document.getElementById(containerId);
+    const inputHidden = document.getElementById(inputId);
+    const chips = container.querySelectorAll('.chip');
+
+    chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            chips.forEach(c => c.classList.remove('selecionado'));
+            chip.classList.add('selecionado');
+            inputHidden.value = chip.getAttribute('data-value');
+        });
+    });
+};
+
+// --- 2. SELEÇÃO MÚLTIPLA (Checkbox Visual) ---
+// Para Dias da Semana
+const setupMultiSelect = (containerId) => {
+    const container = document.getElementById(containerId);
+    const chips = container.querySelectorAll('.chip');
+
+    chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            // Toggle: Se tem, tira. Se não tem, coloca.
+            chip.classList.toggle('selecionado');
+        });
+    });
+};
+
+// Inicializa as lógicas
+setupSingleSelect('objetivo-options', 'objetivo-selecionado');
+setupSingleSelect('turno-options', 'turno-selecionado');
+setupMultiSelect('dias-options'); // Dias usa a nova lógica
+
+
+// --- 3. ENVIO INTELIGENTE ---
+document.getElementById('form-agendamento').addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const idade = document.getElementById('idade').value;
+    const objetivo = document.getElementById('objetivo-selecionado').value || "Não informado";
+    const turno = document.getElementById('turno-selecionado').value || "Indiferente";
+
+    // Captura os dias selecionados
+    // Pega todos os chips dentro de #dias-options que tenham a classe .selecionado
+    const diasElements = document.querySelectorAll('#dias-options .selecionado');
+    // Transforma os elementos em um texto separado por vírgula (ex: "Seg, Qua, Sex")
+    let diasSelecionados = Array.from(diasElements).map(el => el.getAttribute('data-value')).join(', ');
+    
+    if(diasSelecionados === "") diasSelecionados = "A combinar";
+
+    // Número do Nutricionista
+    const telefoneNutri = "5585999999999"; 
+
+    // Monta a mensagem
+    const mensagem = `Olá Arthur! Me chamo *${nome}* (${idade} anos).%0A%0A` +
+                     `Gostaria de agendar uma consultoria.%0A` +
+                     `🎯 *Objetivo:* ${objetivo}%0A` +
+                     `📅 *Dias:* ${diasSelecionados}%0A` +
+                     `⏰ *Turno:* ${turno}`;
+
+    const link = `https://wa.me/${telefoneNutri}?text=${mensagem}`;
+    window.open(link, '_blank');
 });
