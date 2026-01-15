@@ -148,7 +148,7 @@ document.getElementById('form-agendamento').addEventListener('submit', (e) => {
     if(diasSelecionados === "") diasSelecionados = "A combinar";
 
     // Número do Nutricionista
-    const telefoneNutri = "5585999999999"; 
+    const telefoneNutri = "558597029871"; 
 
     // Monta a mensagem
     const mensagem = `Olá Arthur! Me chamo *${nome}* (${idade} anos).%0A%0A` +

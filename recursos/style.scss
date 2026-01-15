@@ -457,3 +457,115 @@ html, body{
         }
     }
 }
+
+.rodape {
+    background-color: #061a50; /* Azul bem escuro (quase preto) para contraste */
+    color: #b0c4de; /* Cinza azulado claro para texto (leitura confortável) */
+    padding: 4rem 1rem 1rem 1rem;
+    font-size: 0.9rem;
+
+    .rodape-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Colunas */
+    .rodape-col {
+        h3.rodape-logo {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h4 {
+            color: white;
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        .crn {
+            color: #ffcc00; /* Destaque para o registro profissional */
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .rodape-desc {
+            line-height: 1.6;
+        }
+    }
+
+    /* Links e Listas */
+    .rodape-links, .rodape-contato {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        a {
+            color: #b0c4de;
+            text-decoration: none;
+            transition: color 0.3s;
+
+            &:hover {
+                color: #ffcc00;
+                padding-left: 5px; /* Efeitozinho de movimento */
+            }
+        }
+        
+        /* Ícones de contato */
+        i {
+            margin-right: 10px;
+            width: 20px;
+        }
+    }
+
+    /* Barra Final (Copyright) */
+    .rodape-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+
+        p {
+            margin: 0;
+            font-size: 0.8rem;
+        }
+
+        .rodape-legal {
+            a {
+                color: #b0c4de;
+                text-decoration: none;
+                font-size: 0.8rem;
+                margin: 0 5px;
+                
+                &:hover { text-decoration: underline; }
+            }
+        }
+
+        /* Crédito da sua agência */
+        .agencia {
+            opacity: 0.6;
+            strong { color: white; }
+        }
+    }
+}
+
+/* Responsividade simples */
+@media (max-width: 768px) {
+    .rodape-bottom {
+        flex-direction: column;
+    }
+}

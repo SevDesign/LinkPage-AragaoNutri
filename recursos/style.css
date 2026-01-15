@@ -405,4 +405,101 @@ html, body {
   background-color: #1ebc57;
 }
 
+.rodape {
+  background-color: #061a50; /* Azul bem escuro (quase preto) para contraste */
+  color: #b0c4de; /* Cinza azulado claro para texto (leitura confortável) */
+  padding: 4rem 1rem 1rem 1rem;
+  font-size: 0.9rem;
+  /* Colunas */
+  /* Links e Listas */
+  /* Barra Final (Copyright) */
+}
+.rodape .rodape-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.rodape .rodape-col h3.rodape-logo {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.rodape .rodape-col h4 {
+  color: white;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+.rodape .rodape-col .crn {
+  color: #ffcc00; /* Destaque para o registro profissional */
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.rodape .rodape-col .rodape-desc {
+  line-height: 1.6;
+}
+.rodape .rodape-links, .rodape .rodape-contato {
+  list-style: none;
+  padding: 0;
+  /* Ícones de contato */
+}
+.rodape .rodape-links li, .rodape .rodape-contato li {
+  margin-bottom: 0.8rem;
+}
+.rodape .rodape-links a, .rodape .rodape-contato a {
+  color: #b0c4de;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.rodape .rodape-links a:hover, .rodape .rodape-contato a:hover {
+  color: #ffcc00;
+  padding-left: 5px; /* Efeitozinho de movimento */
+}
+.rodape .rodape-links i, .rodape .rodape-contato i {
+  margin-right: 10px;
+  width: 20px;
+}
+.rodape .rodape-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  /* Crédito da sua agência */
+}
+.rodape .rodape-bottom p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+.rodape .rodape-bottom .rodape-legal a {
+  color: #b0c4de;
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin: 0 5px;
+}
+.rodape .rodape-bottom .rodape-legal a:hover {
+  text-decoration: underline;
+}
+.rodape .rodape-bottom .agencia {
+  opacity: 0.6;
+}
+.rodape .rodape-bottom .agencia strong {
+  color: white;
+}
+
+/* Responsividade simples */
+@media (max-width: 768px) {
+  .rodape-bottom {
+    flex-direction: column;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
