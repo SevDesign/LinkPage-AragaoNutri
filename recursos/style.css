@@ -117,18 +117,18 @@ Cores atuais:
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3.5rem 0 3rem 0;
+  padding: 3.5rem 0 4rem 0;
   transform: translateY(-1px);
   color: white;
   background: linear-gradient(180deg, #061a50, #030f31);
   text-align: center;
 }
-.consultas .title {
+.consultas .titulo {
   font-size: 2.2rem;
   margin: 0;
   font-weight: 700;
 }
-.consultas .subtitle {
+.consultas .subtitulo {
   font-size: 1.1rem;
   opacity: 0.8;
   margin: 0.8rem 0 0.5rem 0;
@@ -502,6 +502,7 @@ Cores atuais:
 .rodape .rodape-container .rodape-col .rodape-links, .rodape .rodape-container .rodape-col .rodape-contato {
   list-style: none;
   padding: 0;
+  /* Ícones de contato */
 }
 .rodape .rodape-container .rodape-col .rodape-links li, .rodape .rodape-container .rodape-col .rodape-contato li {
   margin-bottom: 0.8rem;
@@ -514,9 +515,6 @@ Cores atuais:
 .rodape .rodape-container .rodape-col .rodape-links a:hover, .rodape .rodape-container .rodape-col .rodape-contato a:hover {
   color: #ffcc00;
   padding-left: 5px; /* Efeitozinho de movimento */
-}
-.rodape .rodape-container .rodape-col .rodape-links, .rodape .rodape-container .rodape-col .rodape-contato {
-  /* Ícones de contato */
 }
 .rodape .rodape-container .rodape-col .rodape-links i, .rodape .rodape-container .rodape-col .rodape-contato i {
   margin-right: 10px;
@@ -558,8 +556,11 @@ Cores atuais:
   }
 }
 @media (min-width: 768px) {
-  .etapa {
-    flex-direction: row;
+  .icon-container .icon-logo {
+    width: 4rem;
+  }
+  .icon-container .icon-nome {
+    width: 13rem;
   }
   .head .slide .head-titulos .texto-primario {
     font-size: 3rem;
@@ -567,12 +568,40 @@ Cores atuais:
   }
   .head .slide .head-titulos .texto-secundario {
     font-size: 1.3rem;
+    padding-right: 10%;
   }
   .head .slide .head-titulos .texto-invertido {
     padding-left: 5rem;
   }
+  .consultas .titulo {
+    font-size: 3rem;
+    margin: 2rem 0 0 0;
+  }
   .consultas .topic {
     margin: 3rem 0 1rem 0;
+  }
+  .consultas .oculto-container .etapas-container {
+    max-width: none;
+  }
+  .consultas .oculto-container .etapas-container .etapa {
+    width: 80%;
+    flex-direction: row;
+  }
+  .consultas .oculto-container .etapas-container .etapa .etapa-texto {
+    width: 50%;
+    padding-left: 2rem;
+  }
+  .consultas .oculto-container .etapas-container .etapa .etapa-texto .etapa-header .numero {
+    font-size: 2.5rem;
+  }
+  .consultas .oculto-container .etapas-container .etapa .etapa-texto .etapa-header .titulo {
+    font-size: 2.2rem;
+  }
+  .consultas .oculto-container .etapas-container .etapa .etapa-texto .descricao {
+    font-size: 1.3rem;
+  }
+  .consultas .oculto-container .etapas-container .etapa .etapa-img {
+    height: 400px;
   }
 }
 
