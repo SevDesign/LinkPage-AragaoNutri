@@ -7,6 +7,15 @@ html, body {
   overflow-x: hidden;
 }
 
+/*
+Cores legadas:
+#1d3474
+#061a50
+
+Cores atuais:
+#061a50
+#030f31
+*/
 .icon-container {
   position: absolute;
   display: flex;
@@ -34,7 +43,7 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background: linear-gradient(0deg, #1d3474, #061a50);
+  background-color: #061a50;
 }
 .head .slide-fixo {
   grid-area: pilha;
@@ -79,7 +88,7 @@ html, body {
   transition-delay: 0.2s;
 }
 .head .slide .head-titulos .texto-secundario {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   transition-delay: 0.4s;
 }
 .head .slide .head-titulos .texto-invertido {
@@ -108,22 +117,21 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0 4rem 0;
+  padding: 3.5rem 0 3rem 0;
   transform: translateY(-1px);
   color: white;
-  background: linear-gradient(180deg, #1d3474, #061a50);
+  background: linear-gradient(180deg, #061a50, #030f31);
   text-align: center;
 }
 .consultas .title {
-  font-size: 2.3rem;
-  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+  margin: 0;
   font-weight: 700;
 }
 .consultas .subtitle {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.1rem;
   opacity: 0.8;
-  margin-bottom: 3rem;
+  margin: 0.8rem 0 0.5rem 0;
   max-width: 90%;
 }
 .consultas .topic {
@@ -141,10 +149,10 @@ html, body {
   justify-content: center;
   max-width: 55rem;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
 }
 .consultas .planos-container .plano-container {
-  padding: 2rem 2rem 0 2rem;
+  padding: 1.5rem 1.5rem 0 1.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -182,7 +190,7 @@ html, body {
   display: flex;
   gap: 2rem;
   padding-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .consultas .modelos-container .modelo-item {
   display: flex;
@@ -360,7 +368,7 @@ html, body {
 
 .agendamento {
   background-color: white;
-  padding: 4rem 0;
+  padding: 3rem 0;
   display: flex;
   justify-content: center;
 }
@@ -369,16 +377,16 @@ html, body {
   text-align: center;
 }
 .agendamento .agendamento-content .title {
-  color: #1d3474;
+  color: #061a50;
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 .agendamento .agendamento-content .subtitle {
-  color: #1d3474;
+  color: #061a50;
   margin-bottom: 2rem;
   font-size: 1.2rem;
   opacity: 0.8;
-  font-weight: 600;
+  font-weight: 500;
 }
 .agendamento .agendamento-content .form-grid {
   display: flex;
@@ -389,7 +397,7 @@ html, body {
 .agendamento .agendamento-content .form-grid .input-group label {
   display: block;
   font-weight: 600;
-  color: #1d3474;
+  color: #030f31;
   margin-bottom: 0.5rem;
   font-size: 1rem;
 }
@@ -457,13 +465,10 @@ html, body {
 }
 
 .rodape {
-  background-color: #061a50; /* Azul bem escuro (quase preto) para contraste */
-  color: #b0c4de; /* Cinza azulado claro para texto (leitura confortável) */
-  padding: 4rem 1rem 1rem 1rem;
+  background: linear-gradient(to top, #030f31, #061a50);
+  color: #c2d8f5;
+  padding: 2rem 1rem 1rem 1rem;
   font-size: 0.9rem;
-  /* Colunas */
-  /* Links e Listas */
-  /* Barra Final (Copyright) */
 }
 .rodape .rodape-container {
   max-width: 1200px;
@@ -471,60 +476,59 @@ html, body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
-.rodape .rodape-col h3.rodape-logo {
+.rodape .rodape-container .rodape-col h3.rodape-logo {
   color: white;
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0;
 }
-.rodape .rodape-col h4 {
+.rodape .rodape-container .rodape-col h4 {
   color: white;
-  margin-bottom: 1.2rem;
+  margin: 0 0 1.2rem 0;
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 1px;
   opacity: 0.8;
 }
-.rodape .rodape-col .crn {
+.rodape .rodape-container .rodape-col .crn {
   color: #ffcc00; /* Destaque para o registro profissional */
   font-weight: 600;
   margin-bottom: 1rem;
 }
-.rodape .rodape-col .rodape-desc {
+.rodape .rodape-container .rodape-col .rodape-desc {
   line-height: 1.6;
 }
-.rodape .rodape-links, .rodape .rodape-contato {
+.rodape .rodape-container .rodape-col .rodape-links, .rodape .rodape-container .rodape-col .rodape-contato {
   list-style: none;
   padding: 0;
   /* Ícones de contato */
 }
-.rodape .rodape-links li, .rodape .rodape-contato li {
+.rodape .rodape-container .rodape-col .rodape-links li, .rodape .rodape-container .rodape-col .rodape-contato li {
   margin-bottom: 0.8rem;
 }
-.rodape .rodape-links a, .rodape .rodape-contato a {
+.rodape .rodape-container .rodape-col .rodape-links a, .rodape .rodape-container .rodape-col .rodape-contato a {
   color: #b0c4de;
   text-decoration: none;
   transition: color 0.3s;
 }
-.rodape .rodape-links a:hover, .rodape .rodape-contato a:hover {
+.rodape .rodape-container .rodape-col .rodape-links a:hover, .rodape .rodape-container .rodape-col .rodape-contato a:hover {
   color: #ffcc00;
   padding-left: 5px; /* Efeitozinho de movimento */
 }
-.rodape .rodape-links i, .rodape .rodape-contato i {
+.rodape .rodape-container .rodape-col .rodape-links i, .rodape .rodape-container .rodape-col .rodape-contato i {
   margin-right: 10px;
   width: 20px;
 }
 .rodape .rodape-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 2rem;
+  padding: 2rem 1rem 0 1rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
   gap: 1rem;
-  /* Crédito da sua agência */
 }
 .rodape .rodape-bottom p {
   margin: 0;
@@ -552,8 +556,18 @@ html, body {
   }
 }
 @media (min-width: 768px) {
-  .etapa-1 {
+  .etapa {
     flex-direction: row;
+  }
+  .head .slide .head-titulos .texto-primario {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .head .slide .head-titulos .texto-secundario {
+    font-size: 1.3rem;
+  }
+  .consultas .topic {
+    margin: 3rem 0 1rem 0;
   }
 }
 

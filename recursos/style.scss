@@ -5,6 +5,15 @@ html, body{
     padding: 0;
     overflow-x: hidden;
 }
+/*
+Cores legadas:
+#1d3474
+#061a50
+
+Cores atuais:
+#061a50
+#030f31
+*/
 
 .icon-container{
     position: absolute;
@@ -34,7 +43,7 @@ html, body{
     width: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(0deg, #1d3474, #061a50);
+    background-color: #061a50;
 
     .slide-fixo{
         grid-area: pilha;
@@ -82,7 +91,7 @@ html, body{
             }
 
             .texto-secundario{
-                font-size: .7rem;
+                font-size: .8rem;
                 transition-delay: .4s;
             }
 
@@ -118,23 +127,22 @@ html, body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem 0 4rem 0;
+    padding: 3.5rem 0 3rem 0;
     transform: translateY(-1px);
     color: white;
-    background: linear-gradient(180deg, #1d3474, #061a50);
+    background: linear-gradient(180deg, #061a50, #030f31);
     text-align: center;
 
     .title {
-        font-size: 2.3rem;
-        margin: 0 0 .5rem 0;
+        font-size: 2.2rem;
+        margin: 0;
         font-weight: 700;
     }
     
     .subtitle {
-        font-size: 1.2rem;
-        font-weight: 600;
+        font-size: 1.1rem;
         opacity: 0.8;
-        margin-bottom: 3rem;
+        margin: .8rem 0 .5rem 0;
         max-width: 90%;
     }
 
@@ -154,10 +162,10 @@ html, body{
         justify-content: center;
         max-width: 55rem;
         width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 1.4rem;
         
         .plano-container {
-            padding: 2rem 2rem 0 2rem;
+            padding: 1.5rem 1.5rem 0 1.5rem;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -202,7 +210,7 @@ html, body{
         display: flex;
         gap: 2rem;
         padding-top: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
 
         .modelo-item {
             display: flex;
@@ -403,7 +411,7 @@ html, body{
 
 .agendamento {
     background-color: white;
-    padding: 4rem 0;
+    padding: 3rem 0;
     display: flex;
     justify-content: center;
 
@@ -412,17 +420,17 @@ html, body{
         text-align: center;
 
         .title {
-            color: #1d3474;
+            color: #061a50;
             font-size: 2rem;
             margin-bottom: 0.5rem;
         }
     
         .subtitle {
-            color: #1d3474;
+            color: #061a50;
             margin-bottom: 2rem;
             font-size: 1.2rem;
             opacity: .8;
-            font-weight: 600;
+            font-weight: 500;
         }
     
         .form-grid {
@@ -435,7 +443,7 @@ html, body{
                 label {
                     display: block;
                     font-weight: 600;
-                    color: #1d3474;
+                    color: #030f31;
                     margin-bottom: 0.5rem;
                     font-size: 1rem;
                 }
@@ -516,9 +524,9 @@ html, body{
 }
 
 .rodape {
-    background-color: #061a50; /* Azul bem escuro (quase preto) para contraste */
-    color: #b0c4de; /* Cinza azulado claro para texto (leitura confortável) */
-    padding: 4rem 1rem 1rem 1rem;
+    background: linear-gradient(to top, #030f31, #061a50,);
+    color: #c2d8f5;
+    padding: 2rem 1rem 1rem 1rem;
     font-size: 0.9rem;
 
     .rodape-container {
@@ -527,71 +535,68 @@ html, body{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 3rem;
-        margin-bottom: 3rem;
-    }
-
-    /* Colunas */
-    .rodape-col {
-        h3.rodape-logo {
-            color: white;
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        h4 {
-            color: white;
-            margin-bottom: 1.2rem;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            opacity: 0.8;
-        }
-
-        .crn {
-            color: #ffcc00; /* Destaque para o registro profissional */
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .rodape-desc {
-            line-height: 1.6;
-        }
-    }
-
-    /* Links e Listas */
-    .rodape-links, .rodape-contato {
-        list-style: none;
-        padding: 0;
-
-        li {
-            margin-bottom: 0.8rem;
-        }
-
-        a {
-            color: #b0c4de;
-            text-decoration: none;
-            transition: color 0.3s;
-
-            &:hover {
-                color: #ffcc00;
-                padding-left: 5px; /* Efeitozinho de movimento */
+        margin-bottom: 2rem;
+    
+        .rodape-col {
+            h3.rodape-logo {
+                color: white;
+                font-size: 1.5rem;
+                margin: 0;
+            }
+    
+            h4 {
+                color: white;
+                margin: 0 0 1.2rem 0;
+                text-transform: uppercase;
+                font-size: 0.85rem;
+                letter-spacing: 1px;
+                opacity: 0.8;
+            }
+    
+            .crn {
+                color: #ffcc00; /* Destaque para o registro profissional */
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+    
+            .rodape-desc {
+                line-height: 1.6;
+            }
+            
+            .rodape-links, .rodape-contato {
+                list-style: none;
+                padding: 0;
+        
+                li {
+                    margin-bottom: 0.8rem;
+                }
+        
+                a {
+                    color: #b0c4de;
+                    text-decoration: none;
+                    transition: color 0.3s;
+        
+                    &:hover {
+                        color: #ffcc00;
+                        padding-left: 5px; /* Efeitozinho de movimento */
+                    }
+                }
+                
+                /* Ícones de contato */
+                i {
+                    margin-right: 10px;
+                    width: 20px;
+                }
             }
         }
-        
-        /* Ícones de contato */
-        i {
-            margin-right: 10px;
-            width: 20px;
-        }
     }
 
-    /* Barra Final (Copyright) */
     .rodape-bottom {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 2rem;
+        padding: 2rem 1rem 0 1rem;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         text-align: center;
         gap: 1rem;
@@ -612,7 +617,6 @@ html, body{
             }
         }
 
-        /* Crédito da sua agência */
         .agencia {
             opacity: 0.6;
             strong { color: white; }
@@ -627,7 +631,21 @@ html, body{
 }
 
 @media (min-width: 768px) {   
-    .etapa-1{
+    .etapa{
         flex-direction: row;
     }
+
+    .head .slide .head-titulos .texto-primario{
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .head .slide .head-titulos .texto-secundario{
+        font-size: 1.3rem;
+    }
+
+    .consultas .topic {
+        margin: 3rem 0 1rem 0;
+    }
+
 }

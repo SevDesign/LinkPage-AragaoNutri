@@ -1,10 +1,3 @@
-Etapas da consulta:
-
-    - A consulta é dividida 
-
-
-
-
-
-
-
+informações pendentes:
+crn
+email
