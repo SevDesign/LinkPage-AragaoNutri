@@ -1,0 +1,125 @@
+/* RESET BÁSICO (Caso não tenha no seu CSS global) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* CABEÇALHO */
+.legal-header {
+    background-color: #1d3474; /* Azul da marca */
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.legal-header .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.btn-voltar {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.3s;
+}
+
+.btn-voltar:hover {
+    opacity: 0.8;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.legal-content {
+    max-width: 800px; /* Largura de leitura confortável */
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.legal-section {
+    margin-bottom: 3rem;
+}
+
+.main-title {
+    color: #1d3474;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.last-update {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.legal-block {
+    margin-bottom: 2rem;
+}
+
+.legal-block h3 {
+    color: #061a50;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    border-left: 4px solid #ffcc00; /* Detalhe amarelo */
+    padding-left: 10px;
+}
+
+.legal-block ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.legal-block li {
+    margin-bottom: 0.5rem;
+}
+
+/* ESTILO DE ALERTA MÉDICO */
+.legal-block.alerta {
+    background-color: #fff8e1; /* Amarelo bem clarinho */
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ffecb3;
+}
+
+.legal-block.alerta h3 {
+    border-left-color: #ff9800; /* Laranja */
+    color: #e65100;
+}
+
+/* DIVISOR */
+.divisor {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 3rem 0;
+}
+
+/* RODAPÉ SIMPLES */
+.legal-footer {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .legal-content {
+        margin: 0;
+        border-radius: 0;
+        padding: 1.5rem;
+    }
+    
+    .main-title {
+        font-size: 1.8rem;
+    }
+}

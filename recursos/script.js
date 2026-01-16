@@ -5,7 +5,7 @@ const esperar = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 /* LÓGICA DO SLIDESHOW */
 let indiceAtual = 0;
-let tempoIndice = [7000, 10000, 10000, 10000, 10000];
+let tempoIndice = [6000, 10000, 10000, 10000, 10000];
 const slides = document.querySelectorAll('.slide');
 const texto_primario = document.querySelectorAll('.texto-primario');
 const texto_secundario = document.querySelectorAll('.texto-secundario');
