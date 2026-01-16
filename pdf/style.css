@@ -135,19 +135,19 @@ Cores atuais:
   max-width: 90%;
 }
 .consultas .topic {
-  max-width: 90%;
+  max-width: 100%;
   margin: 2rem 0 1rem 0;
   font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 600;
   opacity: 0.9;
+  text-align: center;
 }
 .consultas .planos-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 55rem;
   width: 100%;
   margin-bottom: 1.4rem;
 }
@@ -188,7 +188,9 @@ Cores atuais:
 }
 .consultas .modelos-container {
   display: flex;
-  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding-top: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -202,6 +204,7 @@ Cores atuais:
   padding: 1rem;
   color: white;
   cursor: default;
+  max-width: 8rem;
 }
 .consultas .info-container {
   display: flex;
@@ -242,17 +245,15 @@ Cores atuais:
   margin: 0;
 }
 .consultas .oculto-container .etapas-container {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.8rem;
   width: 100%;
-  max-width: 800px;
 }
 .consultas .oculto-container .etapas-container .etapa {
-  width: 90%;
+  width: 80%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 1rem;
   border: #e0e0e0 1px solid;
@@ -263,7 +264,8 @@ Cores atuais:
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 90%;
+  width: 50%;
+  padding-left: 2rem;
 }
 .consultas .oculto-container .etapas-container .etapa .etapa-texto .etapa-header {
   display: flex;
@@ -271,33 +273,35 @@ Cores atuais:
   gap: 8px;
 }
 .consultas .oculto-container .etapas-container .etapa .etapa-texto .etapa-header .numero {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: #ffcc00;
   opacity: 0.8;
   line-height: 1;
 }
 .consultas .oculto-container .etapas-container .etapa .etapa-texto .etapa-header .titulo {
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   color: #fff;
   margin: 0;
   font-weight: 700;
 }
 .consultas .oculto-container .etapas-container .etapa .etapa-texto .descricao {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #eee;
   text-align: justify;
   line-height: 1.4;
   margin: 0;
 }
 .consultas .oculto-container .etapas-container .etapa .etapa-img {
-  height: 250px;
+  height: 400px;
   object-fit: cover;
   margin-top: 0.5rem;
 }
 .consultas .oculto-container .localizacao-container {
-  display: none;
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   margin: 2rem 0;
   border-radius: 1rem;
   overflow: hidden;
@@ -306,8 +310,9 @@ Cores atuais:
 }
 .consultas .oculto-container .localizacao-container .mapa-google {
   display: block;
-  width: 100%;
+  width: 60%;
   height: 300px;
+  border-radius: 1rem;
 }
 .consultas .oculto-container .localizacao-container .btn-abrir-mapa {
   display: flex;
@@ -321,6 +326,7 @@ Cores atuais:
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 40%;
 }
 .consultas .oculto-container .localizacao-container .btn-abrir-mapa .icone-mapa {
   background-color: #e8f0fe;
