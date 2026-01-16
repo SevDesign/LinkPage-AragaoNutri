@@ -502,7 +502,6 @@ Cores atuais:
 .rodape .rodape-container .rodape-col .rodape-links, .rodape .rodape-container .rodape-col .rodape-contato {
   list-style: none;
   padding: 0;
-  /* Ícones de contato */
 }
 .rodape .rodape-container .rodape-col .rodape-links li, .rodape .rodape-container .rodape-col .rodape-contato li {
   margin-bottom: 0.8rem;
@@ -515,6 +514,9 @@ Cores atuais:
 .rodape .rodape-container .rodape-col .rodape-links a:hover, .rodape .rodape-container .rodape-col .rodape-contato a:hover {
   color: #ffcc00;
   padding-left: 5px; /* Efeitozinho de movimento */
+}
+.rodape .rodape-container .rodape-col .rodape-links, .rodape .rodape-container .rodape-col .rodape-contato {
+  /* Ícones de contato */
 }
 .rodape .rodape-container .rodape-col .rodape-links i, .rodape .rodape-container .rodape-col .rodape-contato i {
   margin-right: 10px;
@@ -565,6 +567,9 @@ Cores atuais:
   }
   .head .slide .head-titulos .texto-secundario {
     font-size: 1.3rem;
+  }
+  .head .slide .head-titulos .texto-invertido {
+    padding-left: 5rem;
   }
   .consultas .topic {
     margin: 3rem 0 1rem 0;
