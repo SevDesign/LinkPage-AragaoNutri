@@ -5,36 +5,48 @@ const esperar = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 /* LÓGICA DO SLIDESHOW */
 let indiceAtual = 0;
-let tempoIndice = [6000, 10000, 10000, 10000, 10000];
+let tempoIndice = [10000, 18000, 18000, 18000, 18000];
+let timer;
+
 const slides = document.querySelectorAll('.slide');
 const texto_primario = document.querySelectorAll('.texto-primario');
 const texto_secundario = document.querySelectorAll('.texto-secundario');
+const btnProximo = document.getElementById('btn-proximo-slide');
 
-
-function mudarSlide(n) {
+function irParaSlide(novoIndice) {
     slides[indiceAtual].classList.remove('ativo');
-    texto_primario[indiceAtual].classList.remove('t-ativo');
-    texto_secundario[indiceAtual].classList.remove('t-ativo');
+    if(texto_primario[indiceAtual]) texto_primario[indiceAtual].classList.remove('t-ativo');
+    if(texto_secundario[indiceAtual]) texto_secundario[indiceAtual].classList.remove('t-ativo');
 
-    indiceAtual = (n + 1) % slides.length;
+    indiceAtual = novoIndice;
 
     slides[indiceAtual].classList.add('ativo');
-    texto_primario[indiceAtual].classList.add('t-ativo');
-    texto_secundario[indiceAtual].classList.add('t-ativo');
+    if(texto_primario[indiceAtual]) texto_primario[indiceAtual].classList.add('t-ativo');
+    if(texto_secundario[indiceAtual]) texto_secundario[indiceAtual].classList.add('t-ativo');
+
+    resetarTimer();
+}
+
+function proximoSlide() {
+    let proximo = (indiceAtual + 1) % slides.length;
+    irParaSlide(proximo);
+}
+
+function resetarTimer() {
+    clearTimeout(timer);
+    let tempoDestaVez = tempoIndice[indiceAtual] || 5000;
+    timer = setTimeout(proximoSlide, tempoDestaVez);
 }
 
 slides[indiceAtual].classList.add('ativo');
-texto_primario[indiceAtual].classList.add('t-ativo');
-texto_secundario[indiceAtual].classList.add('t-ativo');
+if(texto_primario[indiceAtual]) texto_primario[indiceAtual].classList.add('t-ativo');
+if(texto_secundario[indiceAtual]) texto_secundario[indiceAtual].classList.add('t-ativo');
 
-async function iniciarSlideshow() {
-    while (true) {
-        await esperar(tempoIndice[indiceAtual]);
-        mudarSlide(indiceAtual);
-    }
+if(btnProximo) {
+    btnProximo.addEventListener('click', proximoSlide);
 }
 
-iniciarSlideshow();
+resetarTimer();
 
 
 

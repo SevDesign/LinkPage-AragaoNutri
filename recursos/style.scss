@@ -46,6 +46,16 @@ Cores atuais:
     padding: 0;
     background-color: #061a50;
 
+    .seta{
+        grid-area: pilha;
+        justify-self: end;
+        align-self: end;
+        color: rgb(255, 255, 255);
+        font-size: 1rem;
+        width: 52%;
+        animation: balanco-seta 2.5s ease-in-out infinite;
+    }
+    
     .slide-fixo{
         grid-area: pilha;
         width: 100%;
@@ -122,6 +132,7 @@ Cores atuais:
         display: flex;
     }
 }
+
 
 .consultas {
     display: flex;
@@ -640,6 +651,10 @@ Cores atuais:
         width: 13rem;
     }
 
+    .head .seta{
+        font-size: 2rem;
+    }
+
     .head .slide .head-titulos .texto-primario{
         font-size: 3rem;
         font-weight: 700;
@@ -691,5 +706,17 @@ Cores atuais:
 
     .consultas .oculto-container .etapas-container .etapa .etapa-img{
         height: 400px;
+    }
+}
+
+@keyframes balanco-seta {
+    0% {
+        transform: translateX(-5%); /* Posição original */
+    }
+    50% {
+        transform: translateX(15%); /* Vai um pouquinho pra direita */
+    }
+    100% {
+        transform: translateX(-5%); /* Volta */
     }
 }
