@@ -12,6 +12,7 @@ const slides = document.querySelectorAll('.slide');
 const texto_primario = document.querySelectorAll('.texto-primario');
 const texto_secundario = document.querySelectorAll('.texto-secundario');
 const btnProximo = document.getElementById('btn-proximo-slide');
+const btnVoltar = document.getElementById('btn-voltar-slide');
 
 function irParaSlide(novoIndice) {
     slides[indiceAtual].classList.remove('ativo');
@@ -32,6 +33,11 @@ function proximoSlide() {
     irParaSlide(proximo);
 }
 
+function slideAnterior() {
+    let anterior = (indiceAtual - 1 + slides.length) % slides.length;
+    irParaSlide(anterior);
+}
+
 function resetarTimer() {
     clearTimeout(timer);
     let tempoDestaVez = tempoIndice[indiceAtual] || 5000;
@@ -46,39 +52,39 @@ if(btnProximo) {
     btnProximo.addEventListener('click', proximoSlide);
 }
 
+if(btnVoltar) {
+    btnVoltar.addEventListener('click', slideAnterior);
+}
+
 resetarTimer();
 
 
 
 /* EXIBIR INFORMAÇÕES OCULTAS */
-const btnEtapas = document.getElementById('btn-etapas');
+const btnAgendamento = document.getElementById('btn-agendamento');
 const btnLocalizacao = document.getElementById('btn-localizacao');
 
-const etapasContainer = document.getElementById('etapas');
+const agendamentoContainer = document.getElementById('contato');
 const localizacaoContainer = document.getElementById('localizacao');
 
-let etapas = false;
+let agendamento = false;
 let localizacao = false;
 
-function mostrarEtapas() {
-    etapas = true;
-    
-    ocultarMapa();
-    etapasContainer.classList.add('ativo');
+function mostrarAgendamento() {
+    agendamento = true;
+    agendamentoContainer.classList.add('ativo-agendamento');
 }
 
 function mostrarMapa() {
     localizacao = true;
-
-    ocultarEtapas();
     localizacaoContainer.classList.add('ativo');
 }
 
-function ocultarEtapas() {
-    if (!etapas) return;
+function ocultarAgendamento() {
+    if (!agendamento) return;
 
-    etapas = false;
-    etapasContainer.classList.remove('ativo');
+    agendamento = false;
+    agendamentoContainer.classList.remove('ativo-agendamento');
 }
 
 function ocultarMapa() {
@@ -88,11 +94,11 @@ function ocultarMapa() {
     localizacaoContainer.classList.remove('ativo');
 }
 
-btnEtapas.addEventListener('click', () => {
-    if (!etapas)
-        mostrarEtapas();
+btnAgendamento.addEventListener('click', () => {
+    if (!agendamento)
+        mostrarAgendamento();
     else
-        ocultarEtapas();
+        ocultarAgendamento();
 });
 
 btnLocalizacao.addEventListener('click', () => {

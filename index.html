@@ -17,7 +17,8 @@
 
     <section class="head" id="sobre">
         <div class="slide-fixo"></div>
-        <span id="btn-proximo-slide" class="seta fa-solid fa-arrow-right-to-bracket"></span>
+        <span id="btn-proximo-slide" class="seta-passar fa-solid fa-arrow-right"></span>
+        <span id="btn-voltar-slide" class="seta-voltar fa-solid fa-arrow-left"></span>
 
         <div class="slide ">
             <img class="banner" src="imagens/foto_banner_1.png" alt="">
@@ -114,11 +115,75 @@
             </div>
         </div>
 
+        <h2 class="topic">Etapas da Consulta</h2>
+        <div class="etapas-container">
+            <div class="etapa">
+                <div class="etapa-texto">
+                    <div class="etapa-header">
+                        <span class="numero">01.</span>
+                        <h3 class="titulo">Mapeamento de Rotina</h3>
+                    </div>
+                    <p class="descricao">
+                        Nossa conversa inicial vai além da comida. <br>
+                        Analisamos seus hábitos, horários, treinos e preferências para entender sua rotina e adaptar o plano alimentar à sua realidade 
+                        — e não o contrário.
+                    </p>
+                </div>
+                <img class="etapa-img" src="imagens/foto_etapa_1.png" alt="">
+            </div>
+            
+            <div class="etapa">
+                <div class="etapa-texto">
+                    <div class="etapa-header">
+                        <span class="numero">02.</span>
+                        <h3 class="titulo">Avaliação Corporal</h3>
+                    </div>
+                    <p class="descricao">
+                        Utilizamos adipometria e perimetria para mensurar sua massa muscular e percentual de gordura. 
+                        Esses dados orientam toda a estratégia nutricional, garantindo decisões mais precisas para alcançar seus objetivos.
+                    </p>
+                </div>
+                <img src="imagens/foto_etapa_2.png" alt="Avaliação física com adipômetro" class="etapa-img">
+            </div>
+
+            <div class="etapa">
+                <div class="etapa-texto">
+                    <div class="etapa-header">
+                        <span class="numero">03.</span>
+                        <h3 class="titulo">Plano Personalizado</h3>
+                    </div>
+                    <p class="descricao">
+                        Seu plano alimentar é construído na hora, junto com você, alinhado 
+                        ao seu objetivo, ao que você gosta de comer e à logística do seu dia a dia. 
+                        Nada de dietas prontas ou engessadas.
+                    </p>
+                </div>
+                <img src="imagens/foto_etapa_3.png" alt="Entrega do plano alimentar" class="etapa-img">
+            </div>
+
+            <div class="etapa">
+                <div class="etapa-texto">
+                    <div class="etapa-header">
+                        <span class="numero">04.</span>
+                        <h3 class="titulo">App e Suporte</h3>
+                    </div>
+                    <p class="descricao">
+                        Tenha seu plano e avaliação na palma da mão, através do aplicativo. <br>
+                        Além disso, você conta com suporte direto para tirar dúvidas e realizar ajustes sempre que necessário.
+                        <span style="font-weight: bold; font-size: 1.1rem;">
+                            Vamos trilhar esse caminho juntos!
+                        </span>
+                    </p>
+                </div>
+                <img src="imagens/foto_etapa_4.png" alt="App com plano alimentar e suporte" class="etapa-img">
+            </div>
+        </div>
+
         <h2 class="topic">Mais informações</h2>
         <div class="info-container">
-            <button id="btn-etapas" class="info-item">
+            <button id="btn-agendamento" class="info-item">
                 <i class="fa-solid fa-list-check fa-2x"></i>
-                <span>Etapas da consulta</span>
+                <span>Agende sua consulta</span>
             </button>
 
             <button id="btn-localizacao" class="info-item">
@@ -128,70 +193,6 @@
         </div>
 
         <div class="oculto-container">
-            <div id="etapas" class="etapas-container">
-
-                <div class="etapa">
-                    <div class="etapa-texto">
-                        <div class="etapa-header">
-                            <span class="numero">01.</span>
-                            <h3 class="titulo">Mapeamento de Rotina</h3>
-                        </div>
-                        <p class="descricao">
-                            Nossa conversa inicial vai além da comida. <br>
-                            Analisamos seus hábitos, horários, treinos e preferências para entender sua rotina e adaptar o plano alimentar à sua realidade 
-                            — e não o contrário.
-                        </p>
-                    </div>
-                    <img class="etapa-img" src="imagens/foto_etapa_1.png" alt="">
-                </div>
-                
-                <div class="etapa">
-                    <div class="etapa-texto">
-                        <div class="etapa-header">
-                            <span class="numero">02.</span>
-                            <h3 class="titulo">Avaliação Corporal</h3>
-                        </div>
-                        <p class="descricao">
-                            Utilizamos adipometria e perimetria para mensurar sua massa muscular e percentual de gordura. 
-                            Esses dados orientam toda a estratégia nutricional, garantindo decisões mais precisas para alcançar seus objetivos.
-                        </p>
-                    </div>
-                    <img src="imagens/foto_etapa_2.png" alt="Avaliação física com adipômetro" class="etapa-img">
-                </div>
-
-                <div class="etapa">
-                    <div class="etapa-texto">
-                        <div class="etapa-header">
-                            <span class="numero">03.</span>
-                            <h3 class="titulo">Plano Personalizado</h3>
-                        </div>
-                        <p class="descricao">
-                            Seu plano alimentar é construído na hora, junto com você, alinhado 
-                            ao seu objetivo, ao que você gosta de comer e à logística do seu dia a dia. 
-                            Nada de dietas prontas ou engessadas.
-                        </p>
-                    </div>
-                    <img src="imagens/foto_etapa_3.png" alt="Entrega do plano alimentar" class="etapa-img">
-                </div>
-
-                <div class="etapa">
-                    <div class="etapa-texto">
-                        <div class="etapa-header">
-                            <span class="numero">04.</span>
-                            <h3 class="titulo">App e Suporte</h3>
-                        </div>
-                        <p class="descricao">
-                            Tenha seu plano e avaliação na palma da mão, através do aplicativo. <br>
-                            Além disso, você conta com suporte direto para tirar dúvidas e realizar ajustes sempre que necessário.
-                            <span style="font-weight: bold; font-size: 1.1rem;">
-                                Vamos trilhar esse caminho juntos!
-                            </span>
-                        </p>
-                    </div>
-                    <img src="imagens/foto_etapa_4.png" alt="App com plano alimentar e suporte" class="etapa-img">
-                </div>
-            </div>
-
             <div id="localizacao" class="localizacao-container">
                 <iframe 
                     class="mapa-google"
