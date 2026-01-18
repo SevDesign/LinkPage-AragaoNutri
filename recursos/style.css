@@ -517,7 +517,7 @@ Cores atuais:
   opacity: 0.8;
 }
 .rodape .rodape-container .rodape-col .crn {
-  opacity: 0;
+  display: none;
   color: #ffcc00;
   font-weight: 600;
   margin-bottom: 1rem;
