@@ -264,6 +264,8 @@ Cores atuais:
             border: #e0e0e0 1px solid;
             border-radius: 1rem;
             padding-top: 1rem;
+            background-color: rgb(255, 255, 255, .07);
+            backdrop-filter: blur(10px);
 
             .etapa-texto{
                 display: flex;
@@ -725,6 +727,13 @@ Cores atuais:
 
     .consultas .etapas-container .etapa .etapa-img{
         height: 400px;
+    }
+}
+
+
+@media (min-width: 1600px) {
+        .consultas .etapas-container .etapa .etapa-img{
+        height: 600px;
     }
 }
 
